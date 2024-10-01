@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "359a7790-ce5b-4725-b1c3-33ec1f8f536e",
+		"name": "OfferApiTrial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "limit",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "orderBy",
+							"value": "QUANTITY",
+							"type": "text"
+						},
+						{
+							"key": "orderBy",
+							"value": "PRICE",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderDirection",
+							"value": "DESC",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderDirection",
+							"value": "ASC",
+							"type": "text"
+						},
+						{
+							"key": "filterTitle",
+							"value": "%driver",
+							"type": "text"
+						},
+						{
+							"key": "groupByBrand",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/1.0.0/de/getProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1.0.0",
+						"de",
+						"getProducts"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listProductsGroupByBrand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "limit",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "orderBy",
+							"value": "QUANTITY",
+							"type": "text"
+						},
+						{
+							"key": "orderBy",
+							"value": "PRICE",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderDirection",
+							"value": "DESC",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderDirection",
+							"value": "ASC",
+							"type": "text"
+						},
+						{
+							"key": "filterTitle",
+							"value": "%driver",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/1.0.0/de/getBrandGroupedProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1.0.0",
+						"de",
+						"getBrandGroupedProducts"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "limit",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "QUANTITY",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "PRICE",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderDirection",
+							"value": "DESC",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "orderDirection",
+							"value": "ASC",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupByBrand",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/1.0.0/de/findProduct/Screw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1.0.0",
+						"de",
+						"findProduct",
+						"Screw"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Milky Ways",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "Lagnese",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15.3",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "durable till the end of time (not)",
+							"type": "text"
+						},
+						{
+							"key": "shopUrl",
+							"value": "https://Lagnese.de?id=MilkyWays123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/1.0.0/de/addNewProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1.0.0",
+						"de",
+						"addNewProduct"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,1 @@
+SELECT * FROM products WHERE site='de' ORDER BY quantity DESC
