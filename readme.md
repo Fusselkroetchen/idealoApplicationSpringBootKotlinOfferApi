@@ -15,6 +15,13 @@ The Parameter filterTitle is for finding product by name. You have all benefits 
 Use wildcards and other operators: https://www.w3schools.com/sql/sql_like.asp
 
 
+## Install-Infos
+- install pom.xml maven
+- run kafka-server -> https://kafka.apache.org/quickstart use standart
+- configure intellij
+- run ProductapiApplication
+
+
 ## Ask Questions:
 
 ### • ... publishing API events to a data stream (e.g., Kafka, SNS, or similar).
